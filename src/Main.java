@@ -62,20 +62,24 @@ public class Main {
         //То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
         //Напишите программу, которая выдает сообщение в консоль: "Потребуется дней: " + срок доставки.
         //Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
-        int deliveryDistance = 18;
+        int deliveryDistance = 95;
         int deliveryTime = 1;
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: " + deliveryTime);
-        }
-        if (deliveryDistance > 20) {
-                deliveryTime = deliveryTime + 1;
-            if (deliveryDistance <= 60) {
+        if (deliveryDistance <=100) {
+
+            if (deliveryDistance <= 20) {
                 System.out.println("Потребуется дней: " + deliveryTime);
             }
-        }
-        if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            deliveryTime = deliveryTime + 1;
-            System.out.println("Потребуется дней: " + deliveryTime);
+            if (deliveryDistance > 20) {
+                deliveryTime = deliveryTime + 1;
+                if (deliveryDistance <= 60) {
+                    System.out.println("Потребуется дней: " + deliveryTime);
+                }
+            }
+            //if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            if (deliveryDistance > 60) {
+                deliveryTime = deliveryTime + 1;
+                System.out.println("Потребуется дней: " + deliveryTime);
+            }
         }
         else {
             System.out.println("Доставки нет");
